@@ -1,7 +1,6 @@
 import jwt from 'jsonwebtoken';
 import { jwtSecret } from "./routers";
 import { Request, Response, NextFunction } from 'express';
-import { token } from 'morgan';
 
 export function authenticateJWT(req: Request, res: Response, next: NextFunction) {
   try {
