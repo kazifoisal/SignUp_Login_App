@@ -5,8 +5,7 @@ const app = express();
 const router = express.Router();
 import cookieParser from "cookie-parser";
 app.use(express.json());
-app.use(cookieParser())
-
+app.use(cookieParser());
 
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
@@ -94,7 +93,6 @@ router.post('/login', async (req: Request, res: Response) => {
       });
 
       //cookie section
-
       const options = {
         expires: new Date(Date.now()+2*24*60*60*1000),
         httpOnly:true,
